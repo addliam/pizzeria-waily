@@ -45,12 +45,15 @@ function AcompanamientoComponent({image}) {
   
 function MenuItemComponent({image}) {
 return (<div className="menu-item">
-                <div className="image-menu">
-                    <img src={image} alt="pizza" />
+            <div className="image-menu">
+                <div className="overlay">
+                    <span>Incluye una capa de peperoni cubierto de lazaña y champiñones</span>
                 </div>
-                <h4>Gran pizza italiana</h4>
-                <span>$16.99</span>
-            </div>);
+                <img src={image} alt="pizza" />
+            </div>
+            <h4>Gran pizza italiana</h4>
+            <span>$16.99</span>
+        </div>);
 }
 
 function ClientOpinionComponent({avatarImage,clientName,clientLastName}) {
@@ -117,7 +120,11 @@ export const HomePageComponent = () => {
                 <AcompanamientoComponent image={hamburgerMostaza} />
                 <AcompanamientoComponent image={pizzaStandard} />
                 <AcompanamientoComponent image={pastas} />
+                <AcompanamientoComponent image={langostinos} />
+                <AcompanamientoComponent image={drink} />
+                <AcompanamientoComponent image={doubleHamburger} />
                 <AcompanamientoComponent image={singleHamburger} />
+                <AcompanamientoComponent image={pastas} />
             </div>
         </section>
         <section className='menu'> 
